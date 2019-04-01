@@ -1,1 +1,88 @@
-1
+                                      Escape Characters ( Kaçış Karekterleri)
+
+1- Satır Başı (\n)
+Bu işaretin görevi bir alt satıra geçirmek.Satır başı karakterine ‘yeni satır karakteri’ dendiği de olur.
+
+    Örneğin :>>> print("birinci satır\nikinci satır\nüçüncü satır") // Bu programın çıktısı aşağıdadır.
+                birinci satır
+                ikinci satır
+                üçüncü satır
+
+    Şimdi şu örneğe dikkatlice bakın:
+    
+Diyelim ki bilgisayarınızın ‘C:\’ dizinindeki ‘nisan’ adlı bir klasörün içinde yer alan masraflar.txt
+adlı bir dosyayı yazdığınız bir program içinde kullanmanız gerekiyor. Mesela bu dosyayı, tam
+adresiyle birlikte kullanıcılarınıza göstermek istiyorsunuz.
+
+>>> print("C:\nisan\masraflar.txt") // Çıktısı aşağıdadır.
+C:
+isan\masraflar.txt
+
+Gördüğümüz gibi kaçış olarak algılayıp bi alt satıra indi.Bunu çözmenin iki yolu var.
+1.si
+>>> open("C:\\nisan\\masraflar") // 1 ters taksim yerine 2 ters taksim kullanmak yada 
+2.si
+>>> open("C:/nisan/masraflar")  // düz taksim kullanmaktır.
+
+2-Sekme (\t)
+Burada \t adlı kaçış dizisi, “abc” ifadesinden sonra sanki Tab (sekme) tuşuna basılmış gibi bir
+etki oluşturarak “def” ifadesini sağa doğru itiyor.
+
+  Örneğin : >>> print("abc\tdef") // çıktısı aşağıdadır.
+                abc def
+                
+            
+            >>> print("C:\nisan\masraflar\toplam_masraf.txt") // bir önceki konuda yaşadığımız problemin aynısı.
+                C:
+                isan\masraflar  oplam_masraf.txt
+                
+            
+            Yine aynı şekilde ya 2 ters taksim yada 1 düz taksim kullanarak bu problemi çözebiliriz.
+            
+3-Aynı Satır Başı (\r)
+Bu kaçış dizisi, bir karakter dizisinde aynı satırın en başına dönülmesini sağlar. Bu kaçış
+dizisinin işlevini tanımına bakarak anlamak biraz zor olabilir. O yüzden dilerseniz bu kaçış
+dizisinin ne işe yaradığını bir örnek üzerinde göstermeye çalışalım.
+
+Örneğin : >>> print("Merhaba\rDünya")
+              Dünyaba
+              
+         >>> print("C:\ülke\türkiye\iller\rize\nüfus.txt")
+              izeülke   ürkiye\iller
+              üfus.txt
+
+4-Düşey Sekme (\v)
+   
+   Eğer \ işaretini ‘v’ harfiyle birlikte kullanırsak düşey sekme denen şeyi elde ederiz.
+   
+     örneğin : >>> print("düşey\vsekme")
+                   düşey
+                        sekme
+5-İmleç Kaydırma (\b)
+\ kaçış dizisinin, biraraya geldiğinde özel bir anlam kazandığı bir başka harf de b’dir. \b kaçış
+dizisinin görevi, imleci o anki konumundan sola kaydırmaktır. Bu tanım pek anlaşılır değil.O yüzden örnek göstereceğim.
+
+    Örneğin : >>> print("yahoo.com\b.uk") // yandaki kodda görüldüğü gibi 1 karekter sola gidip yazmaya devam etti.
+                  yahoo.co.uk
+                  
+              >>> print('istihza\b\b\bsn') // istihza kelimesini 3 sola kaydırarak sn kelimesini yazdık.
+                  istisna 
+                  
+6-Küçük Unicode (\u)
+
+UNICODE, karakterlerin, harflerin, sayıların ve bilgisayar ekranında gördüğümüz
+öteki bütün işaretlerin her biri için tek ve benzersiz bir numaranın tanımlandığı bir sistemdir.
+Bu sistemde, ‘kod konumu’ (code point ) adı verilen bu numaralar özel bir şekilde gösterilir.
+
+ Örneğin : ‘İ’ harfi UNICODE sisteminde şu şekilde temsil edilir:
+          >>> print("\u0130")
+              İ
+              
+          >>> print("\u0070")
+              p
+              
+  Dikkat edilecek tek unsur önceki örneklerde olduğu gibi herhangi bir yerin path'ini verirken yanlışıkla kaçış karekteri 
+  yaratmamak.
+                  
+  
+                       
