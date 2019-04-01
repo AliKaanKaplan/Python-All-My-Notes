@@ -1,0 +1,13 @@
+12**3 >> buradaki yan yana 2 adet çarpma işareti aslında 12*12*12 anlamına geliyor. Üs alma gibi şeylerde bu sembolü kullanabiliriz.  &  Aynı görevi pow(x,y) fonksiyonu ilede yapabiliriz.
+Bu fonksiyon toplam üç farklı parametre alır. Ama genelde bu fonksiyon yalnızca iki
+parametre ile kullanılır. Bu fonksiyon yıldızlı parametre almaya uygun değildir.
+
+>>> pow(12, 2)
+144
+
+>>> pow(144, 0.5)
+12.0
+
+>>> pow(11, 3, 4)
+3
+11 sayısının 3. kuvveti olan 1331 sayısı 4 ‘e bölündüğünde, bölme işleminden kalansayı 3.
