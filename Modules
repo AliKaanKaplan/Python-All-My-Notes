@@ -1,0 +1,17 @@
+Modüller ve Onların içindeki değişken ve fonksiyonlar
+
+Modülleri import komutuyla projemizin içine aktarabiliyoruz aşağıda daha ayrıntılı göreceksin.
+
+1-Sys Modülü
+Import sys >> yazarak sys modülünü projemizin içine aktarmış oluyoruz.
+
+Sys.stdout >> projenin içindeki kodların nereye aktarıldığını gösteren fonksiyon.
+Sys.stdout.name >> çıktıların nereye yazılacağını gösterir.
+sys.stdout.mode >> yazma kipninin ne olduğunu gösterir.
+sys.stdout.encoding >> Hangi kodlama biçimi ile kodlandığını gösterir.
+
+2-OS Modülü
+Import os >> yazarak os modülünü projeye aktarabilirsin.
+
+Os.getcwd >> yazarak şuan hangi path’de olduğunu öğrenebilirsin.
+
