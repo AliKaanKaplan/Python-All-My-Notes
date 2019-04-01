@@ -1,12 +1,14 @@
 print(something) >> Ekrana çıktı verir. Aşağıya printle kullanılan komutları yazacağım.
 
-sep=”  “ >> virgül’ün yerine ne yazdırıp tekrar etmek istiyorsak onu yazacağız. 0 yazılamaz.
-Ön koşullu değeri = içinde 1 adet boşluklu değerdir”
+sep=”  “ >> virgül’ün yerine geçecek olan değeri yazdırıp hangi veriyi tekrar ettirmek istiyorsak onu yazacağız. 0 yazılamaz.
+Ön koşullu değeri = içinde 1 adet boşluk değerine sahiptir.
 
-end=”\n” >> print fonksiyonun sonu için kullanılır. Ön tanımlı değeri bir alt satıra geçirir.
+end=”\n” >> Satırın sonunu ilgilendirir.
+Ön koşullu değeri = bir alt satıra geçirir.
 
 file=sys.stdout >> print’i nereye yazdırmak istediğimize karar vermemiz için kullanılır.
-Ön tanımlı değeri ekrana yazdırır. Biz bu komutu kullanmak istersek  aşağıdaki örnekten yola çıkabiliriz.Onun devamındaki import os ve os.getcwd deneme.txt dosyasının nereye oluşturulduğunu gösterir.
+Ön tanımlı değeri ekrana yazdırır. Biz bu komutu kullanmak istersek  aşağıdaki örnekten yola çıkabiliriz.
+Onun devamındaki import os ve os.getcwd deneme.txt dosyasının nereye oluşturulduğunu gösterir.
 
 >>>dosya=open("deneme.txt","w")
 >>> print("BEn phyton!!",file=dosya)
