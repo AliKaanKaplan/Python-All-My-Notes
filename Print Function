@@ -1,0 +1,15 @@
+print(something) >> Ekrana çıktı verir. Aşağıya printle kullanılan komutları yazacağım.
+
+sep=”  “ >> virgül’ün yerine ne yazdırıp tekrar etmek istiyorsak onu yazacağız. 0 yazılamaz.
+Ön koşullu değeri = içinde 1 adet boşluklu değerdir”
+
+end=”\n” >> print fonksiyonun sonu için kullanılır. Ön tanımlı değeri bir alt satıra geçirir.
+
+file=sys.stdout >> print’i nereye yazdırmak istediğimize karar vermemiz için kullanılır.
+Ön tanımlı değeri ekrana yazdırır. Biz bu komutu kullanmak istersek  aşağıdaki örnekten yola çıkabiliriz.Onun devamındaki import os ve os.getcwd deneme.txt dosyasının nereye oluşturulduğunu gösterir.
+
+>>>dosya=open("deneme.txt","w")
+>>> print("BEn phyton!!",file=dosya)
+>>> dosya.close()
+>>> import os
+>>> os.getcwd()
