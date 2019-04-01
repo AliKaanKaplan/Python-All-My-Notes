@@ -83,6 +83,93 @@ Bu sistemde, ‘kod konumu’ (code point ) adı verilen bu numaralar özel bir 
               
   Dikkat edilecek tek unsur önceki örneklerde olduğu gibi herhangi bir yerin path'ini verirken yanlışıkla kaçış karekteri 
   yaratmamak.
+  
+7-Büyük Unicode (\U)
+
+KÜçük unicode ile hemen hemen aynıdır. Ancak U ile gösterilen kod konumları u ile gösterilenlere göre biraz daha uzundur.
+
+  Örneğin : >>>print("\U00000131") // çıktısı hemen altındadır.
+               ı
+
+Gördüğünüz gibi, burada \U kaçış dizisinden sonra gelen kısım toplam 8 haneli bir sayıdan
+oluşuyor. u kaçış dizisinde ise bu kısmı toplam 4 haneli bir sayı olarak yazıyorduk. İşte \u
+kaçış dizisi ile U kaçış dizisi arasındaki fark budur. u kaçış dizisi hakkında söylediğimiz öteki
+her şey U kaçış dizisi için de geçerlidir.
+
+8-Uzun Ad (\N)
+
+UNICODE sistemi ile ilgili bir başka kaçış dizisi de \N adlı kaçış dizisidir.
+UNICODE sisteminde her karakterin tek ve benzersiz bir kod konumu olduğu gibi, tek ve
+benzersiz bir de uzun adı vardır. Örneğin ‘a’ harfinin UNICODE sistemindeki uzun adı şudur: LATIN SMALL LETTER A
+
+Bir karakterin UNICODE sistemindeki uzun adını öğrenmek için unicodedata adlı bir
+modülden yararlanabilirsiniz.
+
+    örneğin: >>> import unicodedata  #  unicodedata modülünü ekler.
+             >>> unicodedata.name('a') # a harfinin unicode karşılığını çağırır.
+                LATIN SMALL LETTER A
+             >>> unicodedata.name('Ş') # Ş harfinin unicode karşılığını çağırır.
+                LATIN CAPITAL LETTER S WITH CEDILLA
+
+Yukarıdaki örnekte görüldüğü gibi a harfinin karşılığını görebiliyoruz. Ayrıca tam tersinide {} parantezini kullanarak yaparız.
+
+     örneğin: >>> print("\N{LATIN SMALL LETTER A}")
+                  a
+              >>> print("\N{LATIN CAPITAL LETTER S WITH CEDILLA}")
+                  ş      
+9-Onaltılı Karakter (\x)
+
+‘x’ harfi de \ işareti ile birleştiğinde özel anlam kazanarak bir kaçış dizisi meydana getirir.
+\x kaçış dizisini kullanarak, onaltılı (hexadecimal ) sayma sistemindeki bir sayının karakter
+karşılığını gösterebilirsiniz.
+
+    örneğin:>>> print("\x41")
+                A
+                 
+Onaltılı sayma sistemindeki 41 sayısı ‘A’ harfine karşılık gelir. Eğer hangi karakterlerin
+hangi sayılara karşılık geldiğini merak ediyorsanız http://www.ascii.cl/ adresindeki tabloyu
+inceleyebilirsiniz. Bu tabloda ‘hex’ sütunu altında gösterilen sayılar onaltılı sayılar olup,
+‘symbol’ sütununda gösterilen karakterlere karşılık gelirler. Örneğin ‘hex’ sütunundaki
+4E sayısı ‘symbol’ sütunundaki ‘N’ harfine karşılık gelir.       
+
+10-Etkisizleştirme (r)
+
+Python’daki en temel kaçış dizisi \ işaretidir. Bu işaret bazı başka harflerle
+birleşerek yeni kaçış dizileri de oluşturabilir.
+Python’da \ işaretinin dışında temel bir kaçış dizisi daha bulunur. Bu kaçış dizisi ‘r’ harfidir.
+Şimdi bu kaçış dizisinin nasıl kullanılacağını ve ne işe yaradığını inceleyelim:
+
+Şöyle bir çıktı vermek istediğimizi düşünün:
+
+Kurulum dizini: C:\aylar\nisan\toplam masraf
+
+Bildiğimiz yoldan bu çıktıyı vermeye çalışırsak neler olacağını adınız gibi biliyorsunuz:
+
+    örneğin:>>> print("Kurulum dizini: C:\aylar\nisan\toplam masraf")
+                Kurulum dizini: C:ylar
+                isan    oplam masraf
+                
+Python tabii ki, karakter dizisi içinde geçen ‘\aylar’, ‘\nisan’, ve ‘\toplam masraf’ ifadelerinin
+ilk karakterlerini yanlış anladı! \a, \n ve \t gibi ifadeler Python’ın gözünde birer kaçış dizisi.
+Dolayısıyla Python \a karakterlerini görünce bir !bip! sesi çıkarıyor, \n karakterlerini görünce
+satır başına geçiyor ve \t karakterlerini görünce de Tab tuşuna basılmış gibi bir tepki veriyor.
+Sonuç olarak da yukarıdaki gibi bir çıktı üretiyor. Bunu Etkisizleştirme komutunu kullanarak basit bir şekilde düzeltebiliriz.
+
+    örnek:>>> print(r"Kurulum dizini: C:\aylar\nisan\toplam masraf") # r komutunu karekter dizisinin dışına yazdık.
+                    Kurulum dizini: C:\aylar\nisan\toplam masraf
+                    
+11-Sayfa Başı (\f)
+
+Bu komut bir sayfayı sonra erdirip bir sonraki sayfaya geçer ve oradan yazmaya devam eder.
+
+    kullanımı: >>> f = open("deneme.txt", "w") # deneme.txt adında dosya oluşturur.
+               >>> print("deneme\fdeneme", file=f) # deneme.txt dosyasına yazdırıyoruz. \f komutu ile 2.i deneme bir sonraki sayfaya yazar.
+               >>> f.close() # deneme.txt dosyasını yazmaya kapatır.
+
+
+                
+
+
                   
   
                        
