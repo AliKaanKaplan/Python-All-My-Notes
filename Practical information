@@ -1,5 +1,5 @@
 Pratik Bİlgiler
-1-Yıldızlı Parametreleri
+1-Yıldız Parametresi
 Örnek yazarak açıklayacağım
 
 print(*”TBMM”,sep=”.”)
@@ -8,3 +8,27 @@ Yukarıdaki komutta Normalde tek bir parametre olarak yazdığımız TBMM parame
 tüm parametrelerin içerisindekileride dahil olmak üzere her harfi bir parametre olarak görüyor.
 Yukarıdaki komutun çıktısı T.B.M.M olacaktır.Çoğunlukla print() ve diziler ile kullanılır.
 Sayılar ile bu yıldızlı parametreyi kullanamıyoruz.
+
+2-Ters Taksim
+Ters taksim yanındaki Tırnağı etkisiz hale getirmek için kullanılır.Çift tırnak veya tek tırnakla bir karekter dizisi yazarken
+içerisinde bir adet tek tırnak veya çift tırnak kullanmamız gerektiğinde ters taksim ile beraberinde tırnağı sağ tarafına koyarak yazabiliriz.
+Diğer bir özelliği ise Print komutunda Tek tırnak veya çift tırnakta tırnağı kapatmadan bir alt satıra inmek istediğimizde \ 
+işaretini kullanarak aynı """ 3 tırnakda olduğu gibi bir alt satırdan karakter dizimize devam edebiliriz.
+
+  Örneğin : >>> print('Yarın Adana\'ya gidiyorum.')     // bu satırın çıktısını aşağıya yazıyorum.
+                Yarın Adana'ya gidiyorum.
+                
+            
+            >>> print("\"book\" kelimesi Türkçede \"kitap\" anlamına gelir.")  // Gördüğümüz gibi çıktısı bi alt satırdadır.
+                "book" kelimesi Türkçede "kitap" anlamına gelir.
+                
+                
+            >>> print("Python 1990 yılında Guido van rossum \
+            ... tarafından geliştirilmeye başlanmış, oldukça \
+            ... güçlü ve yetenekli bir prgoramala dilidir.")   // buradaki amacı bi alt satıra geçirmek.
+            
+            Python 1990 yılında Guido van rossum tarafından geliştirilmeye başlanmış, oldukça güçlü ve 
+            yetenekli bir prgoramala dilidir.
+            
+
+               
