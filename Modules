@@ -15,3 +15,9 @@ Import os >> yazarak os modülünü projeye aktarabilirsin.
 
 Os.getcwd >> yazarak şuan hangi path’de olduğunu öğrenebilirsin.
 
+3-unicodedata Modülü
+import unicodedata >> yazarak unicodedata modülünü projeye aktarabilirsin.
+
+unicodedata.name('a') >> a harfinin UNICODE sistemindeki uzun adını görebilirsiniz.
+LATIN SMALL LETTER A
+
