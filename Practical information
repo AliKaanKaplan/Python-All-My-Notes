@@ -1,0 +1,10 @@
+Pratik Bİlgiler
+1-Yıldızlı Parametreleri
+Örnek yazarak açıklayacağım
+
+print(*”TBMM”,sep=”.”)
+
+Yukarıdaki komutta Normalde tek bir parametre olarak yazdığımız TBMM parametresini başına yıldız koyunca,
+tüm parametrelerin içerisindekileride dahil olmak üzere her harfi bir parametre olarak görüyor.
+Yukarıdaki komutun çıktısı T.B.M.M olacaktır.Çoğunlukla print() ve diziler ile kullanılır.
+Sayılar ile bu yıldızlı parametreyi kullanamıyoruz.
